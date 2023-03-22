@@ -28,7 +28,13 @@ A Google Books API search engine built with a RESTful API. A GraphQL API built w
 
 ## Usage
 
-This type of application is useful for storing and retrieving data. 
+The user is able to search for books, look at the information for them 
+<img width="929" alt="image" src="https://user-images.githubusercontent.com/114966651/227000973-2fbe4d54-3672-49f2-a8b8-c2a28426d886.png">
+
+
+and then save the books they like. 
+<img width="935" alt="image" src="https://user-images.githubusercontent.com/114966651/227000728-22e8183a-6873-40d2-a6ff-d14deba1e60a.png">
+
 
 ## License
 
