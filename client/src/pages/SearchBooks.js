@@ -11,7 +11,7 @@ import {
 import Auth from '../utils/auth';
 import {useMutation} from '@apollo/react-hooks';
 import {SAVE_BOOK} from '../utils/mutations';
-import { searchGoogleBooks } from '../utils/Api';
+import { searchGoogleBooks } from '../utils/API';
 import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
 
 const SearchBooks = () => {
@@ -63,9 +63,9 @@ const SearchBooks = () => {
     }
   };
 
-  //function to handle saving a book to our database
+  // create function to handle saving a book to our database
   const handleSaveBook = async (bookId) => {
-    // find book in `searchedBooks` state by the matching id
+    // find the book in `searchedBooks` state by the matching id
     const bookToSave = searchedBooks.find((book) => book.bookId === bookId);
 
     // get token
@@ -76,11 +76,7 @@ const SearchBooks = () => {
     }
 
     try {
-      const  response  = await saveBook({
-        variables:  {
-          bookData: {...bookToSave}
-        }
-      });
+      const  response  = await saveBook({variables:  { bookData: {...bookToSave}}});
 
       if (! response ) {
         throw new Error("error occoured");
